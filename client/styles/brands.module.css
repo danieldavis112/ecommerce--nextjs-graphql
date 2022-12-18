@@ -1,0 +1,58 @@
+.maindiv{
+ background-color: white;  
+}
+.mainstyle{
+    background-color: white;
+   padding-top:3%;
+    margin-bottom: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.mainhd{
+    margin-left: 4%;
+}
+#border{
+    border-color:#F5EFE6;
+    border-style: inset;
+    border-width: .5px;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+#brandimg{
+    height: 120px;
+    width: 100px;
+    margin: 1%;
+    align-items: center;
+}
+#curvborder{
+    border-style: solid;
+    border-width: 1px;
+    /* border-color: red; */
+    border-radius: 25px;
+}
+#stylrow{
+    padding: 3%;
+}
+#pglst{
+    padding-left:40% ;
+    
+    
+}
+#pglst1{
+    
+    width: fit-content;
+}
+#pglst2{
+    border-style:none;
+    color: black;
+    border-radius: 50%;
+
+} 
+@media (max-width: 550px){
+    #pglst{
+        margin:auto;
+        width:30%;
+        display: none;
+        
+    }
+}

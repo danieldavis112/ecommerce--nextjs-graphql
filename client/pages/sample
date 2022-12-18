@@ -1,0 +1,69 @@
+list[i]=result.orderid.id
+                list[i+1]=result.orderid.date
+                list[i+2]=result.productid.name
+                list[i+3]=result.quantity
+                list[i+4]=result.productid.price
+                list[i+5]=total
+                i=i+6
+
+
+console.log(list.length/6)
+            console.log(list)
+            previd=list[0]
+            j=0;
+           while(j<list.length){
+            if(previd==list[j+6]){
+                console.log(previd);
+            }else{
+                previd=list[j+6]
+                console.log(previd)
+            }
+            j=j+6
+           }
+
+
+           return(
+            <>
+     <p>test done</p> 
+     {/* <Orderdetail data1={ orderinfo}/>
+     <Orderlist data2={ productinfo}/>     */}
+     </>
+);
+
+
+
+const data1=useQuery(GET_ORDER_PRODUCTS,{variables: {orderid},})
+    
+    console.log("data:",data1.data);
+
+
+    orderid=result.orderid.id;
+                {data1.data &&(data1.data.getorderproducts.map((result1)=>{
+                    console.log(result1.orderproductdet.name);
+                    productinfo=[result1.orderproductdet.name,result1.orderproductdet.price];
+                    return (<>
+                        <Orderdetail data1={ orderinfo}/> 
+                        
+    
+                        <Orderlist data2={ productinfo}/>    
+                        
+                    
+                        </>)
+                }
+                )
+                )
+            }
+
+
+
+            if(previd==result.orderid.id ){
+                total=total+(result.productid.price * result.quantity)
+                  
+            }else{
+                total=0
+                total=total+(result.productid.price * result.quantity)
+                previd=result.orderid.id
+            }
+
+            previd=getorderdetailsbyid[0].orderid.id;
+        console.log(previd)
